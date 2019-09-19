@@ -1,7 +1,7 @@
 setImage: &setImage
   docker:
     - image: circleci/node:10-browsers
-  working_directory: ~/MEMS-2.0
+  working_directory: ~/mems-2.0
 
 setRestore: &setRestore
   restore_cache:
