@@ -51,7 +51,7 @@ jobs:
           path: ./build/
       - persist_to_workspace:
           root: ~/mems-2.0
-          paths: build
+          paths: ./build/
 
   deploy:
     <<: *setImage
