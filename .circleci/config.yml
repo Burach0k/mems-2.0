@@ -62,12 +62,12 @@ jobs:
           at: /home/circleci/mems-2.0
       - store_artifacts:
           path: ./build/
-      - run: # test what token.
-          name: 'What token?'
-          command: echo $FIREBASE_TOKEN
+      # - run: # test what token.
+          # name: 'What token?'
+          # command: echo $FIREBASE_TOKEN
       - run:
           name: Deploy to Firebase hosting
-          command: ./node_modules/.bin/firebase deploy --only hosting --token $FIREBASE_TOKEN
+          command: ./node_modules/.bin/firebase deploy --only hosting
 
 workflows:
   version: 2
