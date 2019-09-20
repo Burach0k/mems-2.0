@@ -35,7 +35,7 @@ jobs:
 
       - run:
           name: run-unit-tests
-          command: npm test
+          command: npm run test
 
   build:
     <<: *setImage
@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: build-artifact
-          command: npm build
+          command: npm run build
       - store_artifacts:
           path: ./build/
       - persist_to_workspace:
