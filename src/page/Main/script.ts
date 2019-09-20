@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import Card from 'Components/Card/index.vue';
+import Card from '../../components/Card/index.vue';
 
 @Component({
   components: {

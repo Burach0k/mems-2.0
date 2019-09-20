@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Main from 'Page/Main/index.vue';
+import Main from './page/Main/index.vue';
 
 class AppCore {
   private instance!: Vue;
