@@ -1,7 +1,7 @@
 setImage: &setImage
   docker:
     - image: circleci/node:10-browsers
-  working_directory: ~/mems-2.0
+  working_directory: ~/repo
 
 setRestore: &setRestore
   restore_cache:
@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: install-dependencies
-          command: npm install
+          command: yarn install
 
       - save_cache:
           paths:
@@ -35,7 +35,7 @@ jobs:
 
       - run:
           name: run-unit-tests
-          command: npm test
+          command: yarn test
 
   build:
     <<: *setImage
@@ -46,12 +46,12 @@ jobs:
 
       - run:
           name: build-artifact
-          command: npm build
+          command: yarn build
       - store_artifacts:
           path: ./build/
       - persist_to_workspace:
-          root: ~/mems-2.0
-          paths: ./build/
+          root: ~/repo
+          paths: build
 
   deploy:
     <<: *setImage
@@ -59,10 +59,10 @@ jobs:
       - checkout
       - <<: *setRestore
       - attach_workspace:
-          at: ~/mems-2.0
+          at: ~/repo
       - store_artifacts:
           path: ./build/
-      - run:
+      - run: # test what token.
           name: 'What token?'
           command: echo $FIREBASE_TOKEN
       - run:
@@ -81,7 +81,7 @@ workflows:
           requires:
             - save_cache
       - deploy:
-          context: Mems2dot0
+          context: Task1
           requires:
             - build
             - test
