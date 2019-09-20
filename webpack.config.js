@@ -11,7 +11,7 @@ module.exports = {
     filename: 'index.js',
     // globalObject: 'this',
     // chunkFilename: '[name].js',
-    // path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
