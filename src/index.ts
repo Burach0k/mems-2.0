@@ -1,19 +1,11 @@
-import Vue from 'vue';
-import Main from './page/Main/index.vue';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './routing/script'
 
-class AppCore {
-  private instance!: Vue;
+Vue.config.productionTip = false
 
-  private init() {
-    this.instance = new Vue({
-      el: '#app',
-      render: (h) => h(Main),
-    });
-  }
-
-  constructor() {
-    this.init();
-  }
-}
-
-new AppCore();
+new Vue({
+  el: '#app',
+  router,
+  render: h => h(App)
+})

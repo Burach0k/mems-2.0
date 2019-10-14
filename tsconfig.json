@@ -11,8 +11,8 @@
     "baseUrl": "./",
     "paths": {
       "Page/*": ["src/page/*"],
+      "Routing/*": ["src/routing/*"],
       "Components/*": ["src/components/*"]
     }
-  },
-  "include": ["src/*", "src/**/*"]
+  }
 }

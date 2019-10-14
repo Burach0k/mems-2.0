@@ -52,12 +52,13 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, 'src/components/'),
       Page: path.resolve(__dirname, 'src/Page/'),
+      Routing: path.resolve(__dirname, 'src/routing/'),
     },
   },
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './index.html'
     }),
     new VueLoaderPlugin(),
   ]
