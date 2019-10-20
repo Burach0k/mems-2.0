@@ -1,35 +1,26 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import Input from 'Components/Input/index.vue';
-import TextArea from 'Components/TextArea/index.vue';
-import Select from 'Components/Select/index.vue';
-
-@Component({
-  components: {
-    'new-input': Input,
-    'new-text-area': TextArea,
-    'new-select': Select,
-  },
-})
+import { Vue, Component } from 'vue-property-decorator'
+import { IRegistationForm } from './registration.model'
+@Component
 export default class Main extends Vue {
-  languages: Array<String> = ['ru', 'en'];
-  sex: Array<String> = ['Мужчина', 'Женщина'];
-  country: Array<String> = ['Беларусь', 'Россия'];
 
-  login: String = '';
-  password: String = '';
-  secondPassword: String = '';
-  firsName: String = '';
-  thirdName: String = '';
-  lastName: String = '';
-  initials: String = '';
-  specialization: String = '';
-  email: String = '';
-  telephone: String = '';
-  fax: String = '';
-
-  institutions: String = '';
-  signature: String = '';
-  addres: String = '';
-  aboutMe: String = '';
+  public registrationForm: IRegistationForm = {
+    languages: ['ru', 'en'],
+    sex:['Мужчина', 'Женщина'],
+    country: ['Беларусь', 'Россия'],
+    login: '',
+    password: '',
+    secondPassword: '',
+    firsName: '',
+    thirdName: '',
+    lastName: '',
+    initials: '',
+    specialization: '',
+    email: '',
+    telephone: '',
+    fax: '',
+    institutions: '',
+    signature: '',
+    addres: '',
+    aboutMe: '',
+  }
 }

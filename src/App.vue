@@ -3,21 +3,6 @@
     <router-view />
   </div>
 </template>
-
-<script>
-import Vue from 'vue';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserLock, faBook, faHashtag } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
-library.add(faUserLock, faBook, faHashtag);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
-
-export default {
-  name: 'app',
-};
-</script>
-
 <style>
 html,
 body {
@@ -42,3 +27,5 @@ body {
   border: none!important;
 }
 </style>
+
+<script lang="ts"> export default { name: 'App' }; </script>

@@ -1,11 +1,8 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component, Prop } from 'vue-property-decorator'
 
-@Component({
-  props: {
-    name: String,
-    value: String,
-    placeholder: String,
-  },
-})
-export default class Input extends Vue {}
+@Component
+export default class Input extends Vue {
+  @Prop(String) name: string;
+  @Prop(String) value: string;
+  @Prop(String) placeholder: string;
+}
