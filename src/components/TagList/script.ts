@@ -1,15 +1,12 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component, Prop } from 'vue-property-decorator'
 import VueTagsInput from '@johmun/vue-tags-input';
 
 @Component({
   components: {
     'tag-list': VueTagsInput,
   },
-  props: {
-    value: String,
-    tags: Array,
-    onChange(): void {},
-  },
 })
-export default class TagList extends Vue {}
+export default class TagList extends Vue {
+  @Prop(String) value: string;
+  @Prop(Array) tags: string[];
+}

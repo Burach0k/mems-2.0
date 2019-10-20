@@ -11,30 +11,30 @@
       <div class="form-data">
         <new-select name='Язык' :options='languages'/>
         
-        <new-input name="Логин" placeholder="Логин" v-model="login" />
-        <new-input name="Пароль" placeholder="Пароль" v-model="password" />
-        <new-input name="Повторить пороль" placeholder="Повторить пороль" v-model="secondPassword" />
-        <new-input name="Имя" placeholder="Имя" v-model="firsName" />
-        <new-input name="Отчество" placeholder="Отчество" v-model="thirdName" />
-        <new-input name="Фамилия" placeholder="Фамилия" v-model="lastName" />
-        <new-input name="Инициалы" placeholder="Инициалы" v-model="initials" />
+        <new-input name="Логин" placeholder="Логин" v-model="registrationForm.login" />
+        <new-input name="Пароль" placeholder="Пароль" v-model="registrationForm.password" />
+        <new-input name="Повторить пороль" placeholder="Повторить пороль" v-model="registrationForm.secondPassword" />
+        <new-input name="Имя" placeholder="Имя" v-model="registrationForm.firsName" />
+        <new-input name="Отчество" placeholder="Отчество" v-model="registrationForm.thirdName" />
+        <new-input name="Фамилия" placeholder="Фамилия" v-model="registrationForm.lastName" />
+        <new-input name="Инициалы" placeholder="Инициалы" v-model="registrationForm.initials" />
        
         <new-select name='Пол' :options='sex'/>
        
-        <new-input name="Специализация" placeholder="Специализация" v-model="specialization" />
+        <new-input name="Специализация" placeholder="Специализация" v-model="registrationForm.specialization" />
        
-        <new-text-area name="Учреждения" placeholder="Учреждения" v-model="institutions" />
-        <new-text-area name="Подпись" placeholder="Подпись" v-model="signature" />
+        <new-text-area name="Учреждения" placeholder="Учреждения" v-model="registrationForm.institutions" />
+        <new-text-area name="Подпись" placeholder="Подпись" v-model="registrationForm.signature" />
        
-        <new-input name="E-mail" placeholder="E-mail" v-model="email" />
-        <new-input name="Телефон" placeholder="Телефон" v-model="telephone" />
-        <new-input name="Факс" placeholder="Факс" v-model="fax" />
+        <new-input name="E-mail" placeholder="E-mail" v-model="registrationForm.email" />
+        <new-input name="Телефон" placeholder="Телефон" v-model="registrationForm.telephone" />
+        <new-input name="Факс" placeholder="Факс" v-model="registrationForm.fax" />
        
-        <new-text-area name="Почтовый адрес" placeholder="Почтовый адрес" v-model="addres" />
+        <new-text-area name="Почтовый адрес" placeholder="Почтовый адрес" v-model="registrationForm.addres" />
        
         <new-select :options='country'/>
        
-        <new-text-area name="О себе" placeholder="О себе" v-model="aboutMe" />
+        <new-text-area name="О себе" placeholder="О себе" v-model="registrationForm.aboutMe" />
        
         <button type="submit" class="button">Регистрация</button>
       </div>

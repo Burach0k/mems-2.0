@@ -1,15 +1,7 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import Header from 'Components/Header/index.vue';
-import TagList from 'Components/TagList/index.vue';
+import { Vue, Component } from 'vue-property-decorator'
 
-@Component({
-  components: {
-    'new-header': Header,
-    'tag-list': TagList,
-  },
-})
+@Component
 export default class Main extends Vue {
-  public tags: Array<String> = ['Математика', 'Физика', 'Информатика'];
-  public tag: String = '';
+  public tags: string[] = ['Математика', 'Физика', 'Информатика'];
+  public tag: string = '';
 }

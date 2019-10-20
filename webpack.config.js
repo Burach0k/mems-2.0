@@ -9,8 +9,6 @@ module.exports = {
   },
   output: {
     filename: 'index.js',
-    // globalObject: 'this',
-    // chunkFilename: '[name].js',
     path: path.resolve(__dirname, 'build'),
   },
   module: {
@@ -19,7 +17,6 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
         options: {
-          // configFileName: 'tsconfig.json',
           appendTsSuffixTo: [/\.vue$/],
         },
       },
@@ -51,7 +48,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.vue'],
     alias: {
       Components: path.resolve(__dirname, 'src/components/'),
-      Page: path.resolve(__dirname, 'src/Page/'),
+      Page: path.resolve(__dirname, 'src/page/'),
       Routing: path.resolve(__dirname, 'src/routing/'),
     },
   },
