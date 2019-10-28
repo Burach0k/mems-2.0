@@ -2,6 +2,8 @@
   <div>
     <div class="header">
       <p class="name">-------------------------ХЭДЕР---------------------</p>
+
+      <auth-field></auth-field>
     </div>
 
     <slot name="routing"></slot>
@@ -14,14 +16,15 @@
 .header {
   display: flex;
 
-  height: 90px;
+  height: 160px;
 
   padding: 0 20px;
 
   justify-content: space-between;
   align-items: center;
 
-  background-color: bisque;
+  background-image: -webkit-linear-gradient(8deg, #dae5e7, #43b0cb);
+  background-image: linear-gradient(8deg, #dae5e7, #43b0cb);
 }
 .name {
   margin: 0;

@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 .button {
-  height: 50px;
+  height: 24px;
   width: 100%;
 
   padding: 5px 10px;
@@ -21,7 +21,7 @@ body {
 
   color: #fff;
 
-  font-size: 20px;
+  font-size: 14px;
 }
 .ti-input {
   border: none!important;
