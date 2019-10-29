@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="journal-name">
-      <h4>Известия Национальной академии наук Беларуси. Серия физико-математических наук</h4>
+      <h4>{{$t('mainPage.journalName')}}</h4>
     </div>
 
     <div class="parts info">
