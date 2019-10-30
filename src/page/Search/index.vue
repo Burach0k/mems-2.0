@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h3>Поиск</h3>
+    <h3>{{$t('searchPage.title')}}</h3>
     <div class="search-field">
       <h4>Поиск по авторам:</h4>
       <tag-list :tags="authTags" :value="authTag" />

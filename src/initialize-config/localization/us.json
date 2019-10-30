@@ -1,0 +1,13 @@
+{
+    "mainPage": {
+        "journalName": "News of the National Academy of Sciences of Belarus. Series of physical and mathematical sciences"
+    },
+    "header": {
+        "home": "Home",
+        "search": "Search",
+        "languages": "Languages"
+    },
+    "searchPage": {
+        "title": "Search"
+    }
+}

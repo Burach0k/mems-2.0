@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       {
-        test: /\.js/,
+        test: /\.js$/,
         loaders: ['babel-loader'],
       },
       {
@@ -55,8 +55,8 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.html',
     }),
     new VueLoaderPlugin(),
-  ]
+  ],
 };
