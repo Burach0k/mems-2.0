@@ -1,7 +1,16 @@
 <template>
   <div>
     <div class="header">
-      <p class="name">-------------------------ХЭДЕР---------------------</p>
+      <div class="languages">
+        <span
+          v-for=" lang in languages"
+          :key="lang"
+          :class="{active:lang===selectedLanguage}"
+          @click.prevent="setLanguage(lang)"
+        >
+          <country-flag :country="lang" />
+        </span>
+      </div>
     </div>
 
     <slot name="routing"></slot>
@@ -29,5 +38,9 @@
 .icon {
   width: 120px;
   height: 60px;
+}
+
+.languages .active {
+  border-bottom: 2px solid black;
 }
 </style>
