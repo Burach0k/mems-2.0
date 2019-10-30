@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view></router-view>
   </div>
 </template>
 <style>
@@ -9,23 +9,45 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .button {
-  height: 24px;
+  height: 30px;
   width: 100%;
 
   padding: 5px 10px;
 
   border-radius: 4px;
-  background-color: cornflowerblue;
   border: none;
 
-  color: #fff;
-
   font-size: 14px;
+  color: #fff;
 }
+.success-button {
+  background-color: #23aebc;
+}
+.error-button {
+  background-color: #ff3737;
+}
+
 .ti-input {
-  border: none!important;
+  border: none !important;
+}
+
+.ti-tags .ti-tag {
+  padding: 5px !important;
+  color: #0D0D0D !important;
+  background-color: #EAF205 !important;
+  font-size: 16px !important;
+}
+.tags > div {
+  display: inline-block;
+}
+
+.page {
+  padding: 10px 40px;
 }
 </style>
 
-<script lang="ts"> export default { name: 'App' }; </script>
+<script lang="ts">
+export default { name: 'App' };
+</script>

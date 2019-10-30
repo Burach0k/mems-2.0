@@ -3,6 +3,5 @@ import input from 'Components/Input/index.vue';
 import select from 'Components/Select/index.vue';
 import tagList from 'Components/TagList/index.vue';
 import textArea from 'Components/TextArea/index.vue';
-import AuthField from 'Components/AuthorizationField/index.vue';
 
-export { header, input, select, tagList, textArea, AuthField };
+export { header, input, select, tagList, textArea };

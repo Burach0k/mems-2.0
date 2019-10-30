@@ -1,7 +1,5 @@
 <template>
-<div>
-<new-header></new-header>
-  <div class="container">
+  <div class="container page">
     <div class="journal-name">
       <h4>Известия Национальной академии наук Беларуси. Серия физико-математических наук</h4>
     </div>
@@ -13,11 +11,11 @@
 
       <div class="personal-info">
         <p>
-          <font-awesome-icon icon="book" class="book-icon" />Открытый доступ
+          <font-awesome-icon icon="book" class="icon book-icon" />Открытый доступ
         </p>
 
         <p>
-          <font-awesome-icon icon="user-lock" class="user-icon" />Только для подписчиков
+          <font-awesome-icon icon="user-lock" class="icon user-icon" />Только для подписчиков
         </p>
         <tag-list :tags="tags" :value="tag" />
       </div>
@@ -35,15 +33,11 @@
       </p>
     </div>
   </div>
-  </div>
 </template>
 
 <script src="./script.ts" lang="ts"></script>
 
 <style scoped>
-.container {
-  padding: 20px;
-}
 .journal-name {
   padding: 0 20px;
   margin: 10px 0;
@@ -78,12 +72,15 @@
   width: 180px;
   height: 220px;
 }
+.icon {
+  width: 20px;
+}
 .book-icon {
-  color: rgb(93, 172, 99);
+  color: #0d0d0d;
   padding: 0 4px;
 }
 .user-icon {
-  color: rgb(100, 201, 226);
+  color: #0d0d0d;
   padding: 0 4px;
 }
 .personal-info {

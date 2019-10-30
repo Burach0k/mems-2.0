@@ -12,4 +12,3 @@ Vue.component('new-select', shareComponents.select);
 Vue.component('new-input', shareComponents.input);
 Vue.component('tag-list', shareComponents.tagList);
 Vue.component('new-text-area', shareComponents.textArea);
-Vue.component('auth-field', shareComponents.AuthField);

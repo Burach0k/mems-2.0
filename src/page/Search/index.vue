@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="page">
     <h3>Поиск</h3>
     <div class="search-field">
       <h4>Поиск по авторам:</h4>
