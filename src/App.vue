@@ -3,6 +3,7 @@
     <router-view></router-view>
   </div>
 </template>
+
 <style>
 html,
 body {
@@ -45,6 +46,11 @@ body {
 
 .page {
   padding: 10px 40px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #f2e205;
 }
 </style>
 

@@ -1,35 +1,32 @@
 <template>
-  <div>
-    <div class="header">
-      <router-link to="/">
-        <img
-          src="https://i-love-png.com/images/hive-hexagon-pngac3-4bf0-853a-871b34ab102f_11111.png"
-          class="logo"
-        />
-      </router-link>
+  <div class="header">
+    <router-link to="/">
+      <img
+        src="https://i-love-png.com/images/hive-hexagon-pngac3-4bf0-853a-871b34ab102f_11111.png"
+        class="logo"
+      />
+    </router-link>
 
-      <div>
-        <div class="routing">
-          <router-link to="/">{{$t('header.home')}}</router-link>
-          <router-link to="/search">{{$t('header.search')}}</router-link>
+    <div>
+      <div class="routing">
+        <router-link to="/">{{$t('header.home')}}</router-link>
+        <router-link to="/search">{{$t('header.search')}}</router-link>
 
-          <div class="jopa">
-            {{$t('header.languages')}}
-            <div class="language-list">
-              <span
-                v-for=" lang in languages"
-                :key="lang"
-                :class="{active:lang===selectedLanguage}"
-                @click.prevent="setLanguage(lang)"
-              >
-                <country-flag :country="lang" />
-              </span>
-            </div>
+        <div class="jopa">
+          {{$t('header.languages')}}
+          <div class="language-list">
+            <span
+              v-for=" lang in languages"
+              :key="lang"
+              :class="{active:lang===selectedLanguage}"
+              @click.prevent="setLanguage(lang)"
+            >
+              <country-flag :country="lang" />
+            </span>
           </div>
         </div>
       </div>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 

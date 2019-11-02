@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Main from 'Page/Main/index.vue';
 import NotFound from 'Page/NotFound/index.vue';
 import Registration from 'Page/Registration/index.vue';
-import Header from 'Components/Header/index.vue';
+import PageContainer from 'Components/PageContainer/index.vue';
 import Search from 'Page/Search/index.vue';
 import Login from 'Page/Login/index.vue';
 
@@ -13,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Header,
+      component: PageContainer,
       children: [
         {
           path: '',
