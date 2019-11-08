@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     404
     <router-link to="/">
       <button>back</button>

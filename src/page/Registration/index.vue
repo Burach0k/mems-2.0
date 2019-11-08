@@ -1,5 +1,5 @@
 <template>
-  <div class="registration">
+  <div class="registration page">
     <h3>Регистрация</h3>
     <p>
       Заполните, пожалуйста, форму регистрации.
@@ -50,9 +50,6 @@
 <script src="./script.ts" lang="ts"></script>
 
 <style scoped>
-.registration {
-  padding: 40px;
-}
 form {
   width: 60%;
 

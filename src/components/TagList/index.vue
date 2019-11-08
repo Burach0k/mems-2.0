@@ -8,10 +8,8 @@
 <script src="./script.ts" lang="ts"></script>
 
 <style scoped>
-.tags > div {
-  display: inline-block;
-}
 .icon {
-  color: #5c6bc0;
+  width: 20px;
+  color: #0D0D0D;
 }
 </style>

@@ -3,7 +3,9 @@ import Router from 'vue-router';
 import Main from 'Page/Main/index.vue';
 import NotFound from 'Page/NotFound/index.vue';
 import Registration from 'Page/Registration/index.vue';
+import PageContainer from 'Components/PageContainer/index.vue';
 import Search from 'Page/Search/index.vue';
+import Login from 'Page/Login/index.vue';
 
 Vue.use(Router);
 
@@ -11,18 +13,29 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Main',
-      component: Main,
+      component: PageContainer,
+      children: [
+        {
+          path: '',
+          name: 'Main',
+          component: Main,
+        },
+        {
+          path: 'search',
+          name: 'Search',
+          component: Search,
+        },
+      ],
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
     },
     {
       path: '/registration',
       name: 'Registration',
       component: Registration,
-    },
-    {
-      path: '/search',
-      name: 'Search',
-      component: Search,
     },
     {
       path: '*',
