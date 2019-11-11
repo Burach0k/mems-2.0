@@ -21,10 +21,10 @@ body {
   border: none;
 
   font-size: 14px;
-  color: #fff;
+  color: #0D0D0D;
 }
 .success-button {
-  background-color: #23aebc;
+  background-color: #F2E205;
 }
 .error-button {
   background-color: #ff3737;

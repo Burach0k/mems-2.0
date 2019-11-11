@@ -12,7 +12,11 @@
         <router-link to="/">{{$t('header.home')}}</router-link>
         <router-link to="/search">{{$t('header.search')}}</router-link>
 
-        <div class="jopa">
+        <router-link to="/login" class='my-profile'>
+          <font-awesome-icon icon="user" class="icon" />
+        </router-link>
+
+        <div class="languages-container">
           {{$t('header.languages')}}
           <div class="language-list">
             <span
@@ -79,7 +83,7 @@
 .languages .active {
   border-bottom: 2px solid black;
 }
-.jopa {
+.languages-container {
   position: relative;
   border: 2px solid #f2e205;
   padding: 5px 10px;
@@ -94,7 +98,7 @@
   color: #f2e205;
 }
 
-.jopa:hover .language-list {
+.languages-container:hover .language-list {
   display: flex;
   flex-direction: column;
 }
@@ -122,5 +126,12 @@
   margin: -6px 0;
 
   opacity: 0.3;
+}
+
+.my-profile .icon {
+  color: #0d0d0d;
+}
+.routing .my-profile:hover .icon{
+  color: #f2e205;
 }
 </style>
