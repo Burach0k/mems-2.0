@@ -1,4 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator';
+import { card } from '../../initialize-config/model/card.model';
 
 @Component
 export default class Search extends Vue {
@@ -11,8 +12,18 @@ export default class Search extends Vue {
   public dateTags: string[] = ['31/12/1996', '12/03/2002'];
   public dateTag: string = '';
 
-  private cards = [
-    { title: 'title', authors: 'andrei, vlad', info: 'lalalallalalalalal lalalallalal' },
-    {},
+  public testObject: string;
+  private cards: Array<card> = [
+    {
+      id: '1',
+      title: 'Ширина запрещенной зоны кремния в слабых полях',
+      authors: ['Андрей Ушаков', 'Павел Хмурый'],
+      author_cor: ['Антон Гнедов'],
+      keywords: ['Полупроводники', 'Уровень Ферми'],
+    },
   ];
+
+  ckeckTestData(): void {
+    this.cards = JSON.parse(this.testObject);
+  }
 }

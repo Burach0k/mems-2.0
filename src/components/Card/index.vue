@@ -4,9 +4,22 @@
       <font-awesome-icon icon="book" class="icon file-alt article-icon" />
     </div>
     <div class="card-body">
-      <p class="title">{{ title }}</p>
-      <p class="authors">{{ authors }}</p>
-      <p class="info">{{ info }}</p>
+      <div>
+        <span>Заголовок:</span>
+        <p class="title">{{ title }}</p>
+      </div>
+      <div>
+        <span>Авторы:</span>
+        <p class="authors">{{ cardAuthors }}</p>
+      </div>
+      <div>
+        <span>Авторы2:</span>
+        <p class="authors-cor">{{ cardAuthorCor }}</p>
+      </div>
+      <div>
+        <span>Ключевые слова:</span>
+        <p class="keywords">{{ cardKeywords }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -17,7 +30,7 @@
 .card {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 90px;
 
   margin: 10px 0;
 
@@ -26,8 +39,12 @@
   cursor: pointer;
 }
 
+span {
+  font-weight: 700;
+}
+
 .card:hover {
-  box-shadow: 0px 0px 19px 4px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -65,8 +82,10 @@
 }
 
 .title,
-.info,
-.authors {
+.authors-cor,
+.authors,
+.keywords {
+  display: inline-block;
   margin: 0;
 }
 </style>

@@ -22,12 +22,17 @@
         <card
           v-bind:key="card.id"
           v-for="card in cards"
-          :title="card.title"
           :authors="card.authors"
-          :info="card.info"
+          :author_cor="card.author_cor"
+          :title="card.title"
+          :keywords="card.keywords"
         ></card>
       </div>
     </div>
+
+    <span>Для тестов!</span>
+    <input v-model="testObject" />
+    <button v-on:click='ckeckTestData'>Проверить данные</button>
   </div>
 </template>
 
