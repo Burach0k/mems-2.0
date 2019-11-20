@@ -1,5 +1,5 @@
 <template>
-  <div class="registration">
+  <div class="registration page">
     <h3>Регистрация</h3>
     <p>
       Заполните, пожалуйста, форму регистрации.
@@ -36,30 +36,30 @@
        
         <new-text-area name="О себе" placeholder="О себе" v-model="registrationForm.aboutMe" />
        
-        <button type="submit" class="button">Регистрация</button>
+        <button type="submit" class="button success-button">Регистрация</button>
       </div>
     </form>
-
-    <span>Конфиденциальность</span>
-    <p>Имена и адреса электронной почты, введенные на сайте этого журнала, будут использованы исключительно для целей, обозначенных этим журналом, и не будут использованы для каких-либо других целей или предоставлены другим лицам и организациям.</p>
-    <p>ISSN 1561-2430 (Print)</p>
-    <p>ISSN 2524-2415 (Online)</p>
+    
+    <div>
+      <span>Конфиденциальность</span>
+      <p>Имена и адреса электронной почты, введенные на сайте этого журнала, будут использованы исключительно для целей, обозначенных этим журналом, и не будут использованы для каких-либо других целей или предоставлены другим лицам и организациям.</p>
+      <p>ISSN 1561-2430 (Print)</p>
+      <p>ISSN 2524-2415 (Online)</p>
+    </div>
   </div>
 </template>
 
 <script src="./script.ts" lang="ts"></script>
 
 <style scoped>
-.registration {
-  padding: 40px;
-}
 form {
-  width: 60%;
 
-  text-align: center;
 }
 .form-data {
   width: 40%;
   margin: auto;
+}
+h3 {
+  text-align: center;
 }
 </style>

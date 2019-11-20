@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>{{name}}</span>
-    <input :placeholder="placeholder" :value="value" />
+    <input :placeholder="placeholder" :value="value" :type="type" />
   </div>
 </template>
 
@@ -19,6 +19,7 @@ div {
   border-radius: 4px;
   
   text-align: left;
+  background-color: #fff;
 }
 span {
   position: absolute;
@@ -28,6 +29,7 @@ span {
   padding: 0 5px;
 
   background-color: #fff;
+  border-radius: 3px;
   color: rgba(0, 0, 0, 0.411);
 }
 input {
