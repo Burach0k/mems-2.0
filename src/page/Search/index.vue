@@ -1,19 +1,32 @@
 <template>
   <div class="page">
-    <h3>{{$t('searchPage.title')}}</h3>
-    <div class="search-field">
-      <h4>Поиск по авторам:</h4>
-      <tag-list :tags="authTags" :value="authTag" />
-    </div>
+    <h3>{{ $t('searchPage.title') }}</h3>
+    <div class="list-container">
+      <div class="search-list">
+        <div class="search-field">
+          <h4>Поиск по авторам:</h4>
+          <tag-list :tags="authTags" :value="authTag" />
+        </div>
 
-    <div class="search-field">
-      <h4>Поиск по дисциплинам:</h4>
-      <tag-list :tags="discTags" :value="discTag" />
-    </div>
+        <div class="search-field">
+          <h4>Поиск по дисциплинам:</h4>
+          <tag-list :tags="discTags" :value="discTag" />
+        </div>
 
-    <div class="search-field">
-      <h4>Поиск по дате:</h4>
-      <tag-list :tags="dateTags" :value="dateTag" />
+        <div class="search-field">
+          <h4>Поиск по дате:</h4>
+          <tag-list :tags="dateTags" :value="dateTag" />
+        </div>
+      </div>
+      <div class="card-list">
+        <card
+          v-bind:key="card.id"
+          v-for="card in cards"
+          :title="card.title"
+          :authors="card.authors"
+          :info="card.info"
+        ></card>
+      </div>
     </div>
   </div>
 </template>
@@ -31,5 +44,12 @@ h3 {
 }
 .search-field h4 {
   margin: 5px 0;
+}
+.list-container {
+  display: flex;
+}
+.card-list {
+  margin-left: 15px;
+  flex-grow: 1;
 }
 </style>

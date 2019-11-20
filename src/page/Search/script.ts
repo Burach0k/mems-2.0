@@ -1,4 +1,4 @@
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator';
 
 @Component
 export default class Search extends Vue {
@@ -10,4 +10,9 @@ export default class Search extends Vue {
 
   public dateTags: string[] = ['31/12/1996', '12/03/2002'];
   public dateTag: string = '';
+
+  private cards = [
+    { title: 'title', authors: 'andrei, vlad', info: 'lalalallalalalalal lalalallalal' },
+    {},
+  ];
 }
