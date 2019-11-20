@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>{{name}}</span>
-    <textarea :placeholder="placeholder" :value="value" />
+    <textarea :placeholder="placeholder" :value="value" @input.prevent="emitInput($event)" />
   </div>
 </template>
 

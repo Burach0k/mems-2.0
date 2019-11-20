@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>{{name}}</span>
-    <new-select :options="options" />
+    <new-select :options="options" @input="emitInput($event)"/>
   </div>
 </template>
 

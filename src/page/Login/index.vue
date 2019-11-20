@@ -4,10 +4,10 @@
     <div class='login-form'>
       <h3>Личный кабинет</h3>
 
-      <new-input name="Логин" placeholder="Логин" v-model="login" />
-      <new-input name="Пароль" placeholder="Пароль" type="password" v-model="password" />
+      <new-input name="Логин"  v-model="login" />
+      <new-input name="Пароль" type="password" v-model="password" />
 
-      <button class="button success-button">Вход</button>
+      <button class="button success-button" @click.prevent="onSubmit()">Вход</button>
     </div>
 
       <p>Вы еще не зарегестрированы? <router-link to="/registration">Зарегестрироваться!</router-link></p>
