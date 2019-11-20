@@ -2,11 +2,15 @@ import { Vue, Component } from 'vue-property-decorator'
 import { IRegistationForm } from './registration.model'
 @Component
 export default class Main extends Vue {
+  public readonly defaultLanguages=['ru', 'en'];
+  public readonly defaultSex=['Мужчина', 'Женщина'];
+  public readonly defaultCountries=['Беларусь', 'Россия'];
+
 
   public registrationForm: IRegistationForm = {
-    languages: ['ru', 'en'],
-    sex:['Мужчина', 'Женщина'],
-    country: ['Беларусь', 'Россия'],
+    language:'' ,
+    sex: '',
+    country: '',
     login: '',
     password: '',
     secondPassword: '',
@@ -22,5 +26,11 @@ export default class Main extends Vue {
     signature: '',
     addres: '',
     aboutMe: '',
+  }
+
+  public onSubmit(): void {
+    console.warn(JSON.stringify(
+      this.registrationForm, null, ' '
+    ))
   }
 }

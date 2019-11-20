@@ -1,7 +1,7 @@
 export interface IRegistationForm {
-    languages: string[];
-    sex: string[];
-    country: string[];
+    language: string;
+    sex: string;
+    country: string;
     login: string;
     password: string;
     secondPassword: string;

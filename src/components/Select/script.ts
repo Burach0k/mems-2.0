@@ -10,4 +10,8 @@ import 'vue-select/dist/vue-select.css';
 export default class Select extends Vue {
   @Prop(String) name: string;
   @Prop(Array) options: string[];
+
+  public emitInput(event:any):void{
+    this.$emit('input',event || '');
+  }
 }
