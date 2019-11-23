@@ -5,17 +5,17 @@
       <div class="search-list">
         <div class="search-field">
           <h4>Поиск по авторам:</h4>
-          <tag-list :tags="authTags" @tags-changed="updateTags($event)"/>
+          <tag-list :tags="getAuthTags" @tags-changed="updateTags($event)"/>
         </div>
 
         <div class="search-field">
           <h4>Поиск по названию:</h4>
-          <tag-list :tags="titleTags"  @tags-changed="updateTags($event)"/>
+          <tag-list :tags="getTitleTags"  @tags-changed="updateTags($event)"/>
         </div>
 
         <div class="search-field">
           <h4>Поиск по ключвым словам:</h4>
-          <tag-list :tags="wordsTags"  @tags-changed="updateTags($event)"/>
+          <tag-list :tags="getWordsTags"  @tags-changed="updateTags($event)"/>
         </div>
       </div>
       <div class="card-list">

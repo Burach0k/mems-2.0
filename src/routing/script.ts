@@ -25,22 +25,22 @@ export default new Router({
           name: 'Search',
           component: Search,
         },
+        {
+          path: 'login',
+          name: 'Login',
+          component: Login,
+        },
+        {
+          path: 'registration',
+          name: 'Registration',
+          component: Registration,
+        },
+        {
+          path: '*',
+          name: 'Not found',
+          component: NotFound,
+        },
       ],
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login,
-    },
-    {
-      path: '/registration',
-      name: 'Registration',
-      component: Registration,
-    },
-    {
-      path: '*',
-      name: 'Not found',
-      component: NotFound,
     },
   ],
 });

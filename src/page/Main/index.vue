@@ -20,7 +20,11 @@
         <div class="tag_list">
           <font-awesome-icon icon="hashtag" class="icon" />
           <div class="tag_container" v-for="tag in tags" :key="tag.keyword">
-            <div class="tag" :value="$t('mainPage.tagTooltip',{number:tag.number})">{{tag.keyword}}</div>
+            <div
+              class="tag"
+              :value="$t('mainPage.tagTooltip',{number:tag.number})"
+              @click="searchByTag(tag.keyword)"
+            >{{tag.keyword}}</div>
           </div>
         </div>
       </div>

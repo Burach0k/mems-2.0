@@ -8,7 +8,13 @@ import { mutations } from './mutations';
 Vue.use(Vuex);
 
 const storeProps: StoreOptions<JournalStore> = {
-  state: {},
+  state: {
+    search: {
+      authTags: [],
+      wordsTags: [],
+      titleTags: [],
+    }
+  },
   getters, // Глобальные функции не меняющие стор, но делающие что-либо
   mutations, // Функции изменения состояния хранилища
   actions, // Асинхронные мутации

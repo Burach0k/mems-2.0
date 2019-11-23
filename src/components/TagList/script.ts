@@ -11,7 +11,7 @@ export default class TagList extends Vue {
   value: string = '';
 
   public tagsChanged(event: any) {
-    console.warn(event);
+    console.warn(this.tags);
     this.$emit('tags-changed', event.target)
   }
 }
