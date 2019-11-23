@@ -14,7 +14,7 @@
       </div>
       <div>
         <span>Авторы2:</span>
-        <p class="authors-cor">{{ cardAuthorCor }}</p>
+        <p class="author-cor">{{ cardAuthorCor }}</p>
       </div>
       <div>
         <span>Ключевые слова:</span>
@@ -82,7 +82,7 @@ span {
 }
 
 .title,
-.authors-cor,
+.author-cors,
 .authors,
 .keywords {
   display: inline-block;

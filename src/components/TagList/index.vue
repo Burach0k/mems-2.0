@@ -1,7 +1,7 @@
 <template>
   <div class="tags">
     <font-awesome-icon icon="hashtag" class="icon" />
-    <tag-list v-model="value" :tags="tags" @tags-changed="newTags => tags = newTags" />
+    <tag-list  v-model="value" :tags="tags" @tags-changed="tagsChanged($event)" />
   </div>
 </template>
 

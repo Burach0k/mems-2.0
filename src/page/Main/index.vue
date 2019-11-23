@@ -17,10 +17,12 @@
         <p>
           <font-awesome-icon icon="user-lock" class="icon user-icon" />Только для подписчиков
         </p>
-        <tag-list :tags="tags" :value="tag" />
+        <div class="tag_list">
+          <font-awesome-icon icon="hashtag" class="icon" />
+          <div class="tag" v-for="tag in tags" :key="tag.keyword">{{tag.keyword}}</div>
+        </div>
       </div>
-    </div>
-
+    </div>``
     <div class="parts">
       <h5>О журнале</h5>
       <p>
@@ -74,6 +76,7 @@
 }
 .icon {
   width: 20px;
+  color: #0d0d0d;
 }
 .book-icon {
   color: #0d0d0d;
@@ -88,5 +91,19 @@
 
   vertical-align: top;
   flex-direction: column;
+}
+
+.tag_list{
+  margin-top: 7px;
+}
+
+.tag {
+  margin: 0 3px;
+  padding: 5px !important;
+  border-radius: 2px;
+  display: inline;
+
+  background-color: #eaf205 !important;
+  font-size: 16px !important;
 }
 </style>

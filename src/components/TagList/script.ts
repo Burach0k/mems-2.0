@@ -7,6 +7,11 @@ import VueTagsInput from '@johmun/vue-tags-input';
   },
 })
 export default class TagList extends Vue {
-  @Prop(String) value: string;
   @Prop(Array) tags: string[];
+  value: string = '';
+
+  public tagsChanged(event: any) {
+    console.warn(event);
+    this.$emit('tags-changed', event.target)
+  }
 }

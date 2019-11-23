@@ -1,29 +1,30 @@
 import { Vue, Component } from 'vue-property-decorator';
-import { card } from '../../initialize-config/model/card.model';
+import Axios from 'axios';
+import { journalSearchResponse } from 'mocks/models';
 
 @Component
 export default class Search extends Vue {
-  public authTags: string[] = ['Ландау', 'Сивухин', 'Коши', 'Свербут'];
+  public cards: journalSearchResponse[] = [];
+
+  public authTags: string[] = [];
   public authTag: string = '';
 
-  public discTags: string[] = ['Математика', 'Физика', 'Информатика'];
-  public discTag: string = '';
+  public wordsTags: string[] = [];
+  public wordsTag: string = '';
 
-  public dateTags: string[] = ['31/12/1996', '12/03/2002'];
-  public dateTag: string = '';
+  public titleTags: string[] = [];
+  public titleTag: string = '';
 
-  public testObject: string;
-  private cards: Array<card> = [
-    {
-      id: '1',
-      title: 'Ширина запрещенной зоны кремния в слабых полях',
-      authors: ['Андрей Ушаков', 'Павел Хмурый'],
-      author_cor: ['Антон Гнедов'],
-      keywords: ['Полупроводники', 'Уровень Ферми'],
-    },
-  ];
+  public testObject: string = '';
 
-  ckeckTestData(): void {
-    this.cards = JSON.parse(this.testObject);
+  ckeckRequest(): void {
+    Axios.get<journalSearchResponse[]>('http://imaph.bas-net.by:81/project.local/scripts/api_search.php').then(response => {
+      console.warn(response);
+      this.cards = response.data
+    });
+  }
+
+  public updateTags(event: any): void {
+    console.warn(event.target);
   }
 }

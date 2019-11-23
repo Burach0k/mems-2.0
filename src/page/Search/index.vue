@@ -5,23 +5,23 @@
       <div class="search-list">
         <div class="search-field">
           <h4>Поиск по авторам:</h4>
-          <tag-list :tags="authTags" :value="authTag" />
+          <tag-list :tags="authTags" @tags-changed="updateTags($event)"/>
         </div>
 
         <div class="search-field">
-          <h4>Поиск по дисциплинам:</h4>
-          <tag-list :tags="discTags" :value="discTag" />
+          <h4>Поиск по названию:</h4>
+          <tag-list :tags="titleTags"  @tags-changed="updateTags($event)"/>
         </div>
 
         <div class="search-field">
-          <h4>Поиск по дате:</h4>
-          <tag-list :tags="dateTags" :value="dateTag" />
+          <h4>Поиск по ключвым словам:</h4>
+          <tag-list :tags="wordsTags"  @tags-changed="updateTags($event)"/>
         </div>
       </div>
       <div class="card-list">
         <card
-          v-bind:key="card.id"
           v-for="card in cards"
+          v-bind:key="card.title"
           :authors="card.authors"
           :author_cor="card.author_cor"
           :title="card.title"
@@ -31,8 +31,7 @@
     </div>
 
     <span>Для тестов!</span>
-    <input v-model="testObject" />
-    <button v-on:click='ckeckTestData'>Проверить данные</button>
+    <button v-on:click='ckeckRequest'>Проверить запрос</button>
   </div>
 </template>
 
