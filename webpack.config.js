@@ -50,6 +50,8 @@ module.exports = {
       Components: path.resolve(__dirname, 'src/components/'),
       Page: path.resolve(__dirname, 'src/page/'),
       Routing: path.resolve(__dirname, 'src/routing/'),
+      Store: path.resolve(__dirname, 'src/store'),
+      Model: path.resolve(__dirname, 'src/initialize-config/model/'),
     },
   },
   devtool: 'source-map',

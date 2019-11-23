@@ -12,7 +12,9 @@
     "paths": {
       "Page/*": ["src/page/*"],
       "Routing/*": ["src/routing/*"],
-      "Components/*": ["src/components/*"]
+      "Components/*": ["src/components/*"],
+      "Store/*": ["src/store/*"],
+      "Model/*": ["src/initialize-config/model/*"]
     }
   }
 }

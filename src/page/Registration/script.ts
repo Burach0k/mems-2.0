@@ -1,5 +1,6 @@
 import { Vue, Component } from 'vue-property-decorator'
-import { IRegistationForm } from './registration.model'
+import { IRegistationForm } from 'Model/registration.model';
+
 @Component
 export default class Main extends Vue {
   public readonly defaultLanguages=['ru', 'en'];
