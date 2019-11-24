@@ -3,19 +3,18 @@
     <h3>{{ $t('searchPage.title') }}</h3>
     <div class="list-container">
       <div class="search-list">
-        <div class="search-field">
-          <h4>Поиск по авторам:</h4>
-          <tag-list :tags="getAuthTags" @tags-changed="updateTags($event)"/>
-        </div>
+        <div>
+          <div class="search-field">
+            <tag-list label='Поиск по авторам: ' :tags="getAuthTags" @tags-changed="updateTags($event)" />
+          </div>
 
-        <div class="search-field">
-          <h4>Поиск по названию:</h4>
-          <tag-list :tags="getTitleTags"  @tags-changed="updateTags($event)"/>
-        </div>
+          <div class="search-field">
+            <tag-list label='Поиск по названию: ' :tags="getTitleTags" @tags-changed="updateTags($event)" />
+          </div>
 
-        <div class="search-field">
-          <h4>Поиск по ключвым словам:</h4>
-          <tag-list :tags="getWordsTags"  @tags-changed="updateTags($event)"/>
+          <div class="search-field">
+            <tag-list label='Поиск по ключвым словам: ' :tags="getWordsTags" @tags-changed="updateTags($event)" />
+          </div>
         </div>
       </div>
       <div class="card-list">
@@ -29,9 +28,6 @@
         ></card>
       </div>
     </div>
-
-    <span>Для тестов!</span>
-    <button v-on:click='ckeckRequest'>Проверить запрос</button>
   </div>
 </template>
 
@@ -43,14 +39,20 @@ h3 {
   padding: 8px;
 }
 .search-field {
-  color: rgba(0, 0, 0, 0.527);
-  padding: 5px;
+  padding: 30px 5px;
 }
 .search-field h4 {
   margin: 5px 0;
 }
 .list-container {
   display: flex;
+}
+.search-list {
+  min-width: 450px;
+}
+.search-list > div {
+  position: sticky;
+  top: 30px;
 }
 .card-list {
   margin-left: 15px;

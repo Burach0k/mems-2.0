@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <loader :loading="loading"></loader>
   </div>
 </template>
 
@@ -54,6 +55,5 @@ body {
 }
 </style>
 
-<script lang="ts">
-export default { name: 'App' };
+<script src="./App.ts" lang="ts">
 </script>
