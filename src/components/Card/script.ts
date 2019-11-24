@@ -1,5 +1,4 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import Axios from 'axios';
 
 @Component
 export default class Card extends Vue {
@@ -14,8 +13,8 @@ export default class Card extends Vue {
 
   constructor() {
     super();
-    this.cardAuthors = this.authors.join(',');
-    this.cardAuthorCor = this.author_cor.join(',');
-    this.cardKeywords = this.keywords.join(',');
+    this.cardAuthors = this.authors.join(', ');
+    this.cardAuthorCor = this.author_cor.join(', ');
+    this.cardKeywords = this.keywords.join(', ');
   }
 }

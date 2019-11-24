@@ -5,7 +5,6 @@
     </div>
     <div class="card-body">
       <div>
-        <span>Заголовок:</span>
         <p class="title">{{ title }}</p>
       </div>
       <div>
@@ -13,7 +12,7 @@
         <p class="authors">{{ cardAuthors }}</p>
       </div>
       <div>
-        <span>Авторы2:</span>
+        <span>Соавторы:</span>
         <p class="author-cor">{{ cardAuthorCor }}</p>
       </div>
       <div>
@@ -28,9 +27,8 @@
 
 <style scoped>
 .card {
-  display: flex;
+  display: inline-flex;
   width: 100%;
-  height: 90px;
 
   margin: 10px 0;
 
@@ -50,7 +48,7 @@ span {
 .card-header {
   display: inline-flex;
   width: 90px;
-  height: 100%;
+  height: auto;
 
   opacity: 0.7;
   border-top-left-radius: 10px;
@@ -76,13 +74,19 @@ span {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.card-body div {
+  display: flex;
+  padding: 8px 0;
+}
+.card-body span {
+  min-width: 138px;
+}
 .article-icon {
   font-size: 35px;
   color: rgba(255, 255, 255, 0.863);
 }
-
 .title,
-.author-cors,
+.author-cor,
 .authors,
 .keywords {
   display: inline-block;
