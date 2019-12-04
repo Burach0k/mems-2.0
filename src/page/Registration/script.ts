@@ -1,5 +1,6 @@
 import { Vue, Component } from 'vue-property-decorator'
 import { IRegistationForm } from 'Model/registration.model';
+import { CREATE_USER } from 'Store/action_names';
 
 @Component
 export default class Main extends Vue {
@@ -30,8 +31,10 @@ export default class Main extends Vue {
   }
 
   public onSubmit(): void {
-    console.warn(JSON.stringify(
-      this.registrationForm, null, ' '
-    ))
+    const data = this.registrationForm;
+
+    this.$store.dispatch(CREATE_USER, data).then(() => {
+      this.$router.push('/');
+    });
   }
 }
