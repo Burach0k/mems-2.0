@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>{{name}}</span>
+    <span v-bind:class="{ requred: requred }">{{name}}</span>
     <textarea :placeholder="placeholder" :value="value" @input.prevent="emitInput($event)" />
   </div>
 </template>
@@ -32,7 +32,12 @@ span {
 }
 textarea {
   border: none;
+  font-size: 18px;
   width: 100%;
   height: 100%;
+}
+.requred::after {
+  content: "*";
+  color: red;
 }
 </style>

@@ -1,4 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator';
+import { CHECK_USER } from 'Store/action_names';
 
 @Component
 export default class AuthorizationField extends Vue {
@@ -6,9 +7,13 @@ export default class AuthorizationField extends Vue {
   public password: string = '';
 
   public onSubmit(): void {
-    console.warn(JSON.stringify({
+    const data = {
       login: this.login,
       password: this.password
-    }, null, ' '))
+    }
+
+    this.$store.dispatch(CHECK_USER, data).then(() => {
+      this.$router.push('/');
+    });
   }
 }

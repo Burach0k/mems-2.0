@@ -1,20 +1,14 @@
 export interface IRegistationForm {
-    language: string;
-    sex: string;
-    country: string;
-    login: string;
-    password: string;
-    secondPassword: string;
-    firsName: string;
-    thirdName: string;
-    lastName: string;
-    initials: string;
-    specialization: string;
-    email: string;
-    telephone: string;
-    fax: string;
-    institutions: string;
-    signature: string;
-    addres: string;
-    aboutMe: string;
+  login: string;
+  password: string;
+  secondPassword: string;
+  lastName: string;
+  firsName: string;
+  thirdName: string;
+  institutions: string;
+  specialization: string;
+  addres: string;
+  email: string;
+  telephone: string;
+  country: string;
 }

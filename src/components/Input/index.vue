@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>{{name}}</span>
+    <span v-bind:class="{ requred: requred }">{{name}}</span>
     <input :value="value" :type="type" @input.prevent="emitInput($event)"/>
   </div>
 </template>
@@ -34,8 +34,13 @@ span {
 }
 input {
   width: 100%;
-  height: 100%;
+  height: 25px;
+  font-size: 18px;
   border: none;
   outline:none;
+}
+.requred::after {
+  content: "*";
+  color: red;
 }
 </style>

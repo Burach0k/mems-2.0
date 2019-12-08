@@ -1,8 +1,9 @@
-export interface JournalStore {
-    loading: boolean,
-    search: {
-        titleTags: string[];
-        wordsTags: string[];
-        authTags: string[]; 
-    }
+export class JournalStore {
+  loading: boolean;
+  search: {
+    titleTags: string[];
+    wordsTags: string[];
+    authTags: string[];
+  };
+  buttonHeaderDisabled: boolean;
 }

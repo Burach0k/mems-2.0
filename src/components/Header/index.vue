@@ -9,10 +9,10 @@
 
     <div>
       <div class="routing">
-        <router-link to="/">{{$t('header.home')}}</router-link>
-        <router-link to="/search">{{$t('header.search')}}</router-link>
+        <router-link to="/" v-if="$route.name !== 'Registration'">{{$t('header.home')}}</router-link>
+        <router-link to="/search" v-if="$route.name !== 'Registration'">{{$t('header.search')}}</router-link>
 
-        <router-link to="/login" class='my-profile'>
+        <router-link to="/login" class='my-profile' v-if="$route.name !== 'Registration'">
           <font-awesome-icon icon="user" class="icon" />
         </router-link>
 
@@ -86,7 +86,7 @@
 .languages-container {
   position: relative;
   border: 2px solid #f2e205;
-  padding: 5px 10px;
+  padding: 10px;
 
   text-align: center;
   align-items: center;
