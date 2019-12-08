@@ -8,16 +8,26 @@
         <p class="title">{{ title }}</p>
       </div>
       <div>
-        <span>Авторы:</span>
-        <p class="authors">{{ cardAuthors }}</p>
+        <span class="sub-header">Авторы :</span>
+        <span 
+        :class="[author === author_cor ? 'author-cor' : '']" 
+         v-for="(author,index) in authors" :key="index">{{ author }},</span>
       </div>
       <div>
-        <span>Соавторы:</span>
-        <p class="author-cor">{{ cardAuthorCor }}</p>
+        <span class="sub-header">Ключевые слова:</span>
+          <span v-for="(keyword,index) in keywords" :key="index">{{ keyword }},</span>
       </div>
       <div>
-        <span>Ключевые слова:</span>
-        <p class="keywords">{{ cardKeywords }}</p>
+        <span class="sub-header">Электронная почта:</span>
+        <span>{{ email }}</span>
+      </div>
+      <div>
+        <span class="sub-header">Номер журнала:</span>
+        <span>{{ number }}</span>
+      </div>
+      <div>
+        <span class="sub-header">Год издания:</span>
+        <span>{{ year }}</span>
       </div>
     </div>
   </div>
@@ -35,10 +45,6 @@
   border-radius: 10px;
 
   cursor: pointer;
-}
-
-span {
-  font-weight: 700;
 }
 
 .card:hover {
@@ -75,21 +81,30 @@ span {
   border-bottom-right-radius: 10px;
 }
 .card-body div {
-  display: flex;
+  display: inline-flex;
+  width:100%;
+  flex-wrap: wrap;
   padding: 8px 0;
 }
-.card-body span {
-  min-width: 138px;
+.sub-header {
+  min-width: 180px;
 }
+
+.card-body span{
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.card-body span:last-child{
+  margin-right: 0px;
+}
+
 .article-icon {
   font-size: 35px;
   color: rgba(255, 255, 255, 0.863);
 }
-.title,
-.author-cor,
-.authors,
-.keywords {
-  display: inline-block;
-  margin: 0;
+
+.author-cor {
+  font-weight: bold;
 }
 </style>

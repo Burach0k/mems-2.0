@@ -12,10 +12,11 @@ export default class Search extends Vue {
 
   updateTags(): void {
     const data = {
-      name: this.getAuthTags,
+      authors: this.getAuthTags,
       title: this.getTitleTags,
       keywords: this.getWordsTags,
     }
+
     this.$store.dispatch(GET_CARD_AT_TAGS, data).then((response: any) => {
       this.cards = response.data
     });

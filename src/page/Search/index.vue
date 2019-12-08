@@ -22,9 +22,12 @@
           v-for="card in cards"
           v-bind:key="card.title"
           :authors="card.authors"
-          :author_cor="card.author_cor"
+          :author_cor="card.author_cor[0]"
           :title="card.title"
           :keywords="card.keywords"
+          :email="card.email"
+          :year="card.year"
+          :number="card.number"
         ></card>
       </div>
     </div>
