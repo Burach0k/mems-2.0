@@ -9,5 +9,22 @@
     },
     "searchPage": {
         "title": "Search"
+    },
+    "registrationPage": {
+        "title": "Registration",
+        "login": "Login",
+        "password": "Password",
+        "secondPassword": "Second password",
+        "lastName": "Last name",
+        "firsName": "Firs name",
+        "thirdName": "Third name",
+        "country": "Country",
+        "institutions": "Institutions",
+        "addres": "Addres",
+        "telephone": "Telephone",
+        "specialization": "Specialization",
+        "registration": "Registration",
+        "confidentiality": "Confidentiality",
+        "confidentiality-text": "The names and email addresses entered on the website of this journal will be used solely for the purposes indicated by this journal and will not be used for any other purposes or provided to other persons and organizations."
     }
 }

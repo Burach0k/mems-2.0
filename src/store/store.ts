@@ -10,6 +10,7 @@ Vue.use(Vuex);
 const storeProps: StoreOptions<JournalStore> = {
   state: {
     loading: false,
+    buttonHeaderDisabled: false,
     search: {
       authTags: [],
       wordsTags: [],

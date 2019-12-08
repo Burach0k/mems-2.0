@@ -1,33 +1,37 @@
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator';
 import { IRegistationForm } from 'Model/registration.model';
 import { CREATE_USER } from 'Store/action_names';
 
 @Component
 export default class Main extends Vue {
-  public readonly defaultLanguages=['ru', 'en'];
-  public readonly defaultSex=['Мужчина', 'Женщина'];
-  public readonly defaultCountries=['Беларусь', 'Россия'];
+  public readonly defaultCountries = ['Беларусь', 'Россия'];
+  public submitDisabled = true;
 
-
-  public registrationForm: IRegistationForm = {
-    language:'' ,
-    sex: '',
-    country: '',
+  public registrationForm: any = { //todo исправить тип
     login: '',
     password: '',
     secondPassword: '',
+    lastName: '',
     firsName: '',
     thirdName: '',
-    lastName: '',
-    initials: '',
+    institutions: '',
     specialization: '',
+    addres: '',
     email: '',
     telephone: '',
-    fax: '',
-    institutions: '',
-    signature: '',
-    addres: '',
-    aboutMe: '',
+    country: '',
+  };
+  
+  updated() {
+    let isAllInputFilled = true;
+
+    Object.keys(this.registrationForm).forEach((key) => {
+      if (this.registrationForm[key].length === 0 && key !== 'specialization' && key !== 'addres' && key !== 'telephone') {
+        isAllInputFilled = false;
+      }
+    });
+
+    this.submitDisabled = !isAllInputFilled;
   }
 
   public onSubmit(): void {

@@ -1,53 +1,40 @@
 <template>
   <div class="registration page">
-    <h3>Регистрация</h3>
-    <p>
-      Заполните, пожалуйста, форму регистрации.
-      <router-link to="/otherPage">Нажать здесь</router-link>, если Вы зарегистрированы в качестве пользователя этого журнала.
-    </p>
+    <h3>{{$t('registrationPage.title')}}</h3>
 
     <form>
-      <h3>Профиль</h3>
       <div class="form-data">
-        
-        <new-select
-          name="Язык"
-          :options="registrationForm.defaultLanguages"
-          @input="registration.language=$event"
-        />
+        <new-input :requred='true' :name="$t('registrationPage.login')" v-model="registrationForm.login" />
 
-        <new-input name="Логин" v-model="registrationForm.login" />
-        <new-input name="Пароль" v-model="registrationForm.password" />
-        <new-input name="Повторить пороль" v-model="registrationForm.secondPassword" />
-        <new-input name="Имя" v-model="registrationForm.firsName" />
-        <new-input name="Отчество" v-model="registrationForm.thirdName" />
-        <new-input name="Фамилия" v-model="registrationForm.lastName" />
-        <new-input name="Инициалы" v-model="registrationForm.initials" />
+        <div class="double-field">
+          <new-input :requred='true' :name="$t('registrationPage.password')" v-model="registrationForm.password" />
+          <new-input :requred='true' :name="$t('registrationPage.secondPassword')" v-model="registrationForm.secondPassword" />
+        </div>
 
-        <new-select name="Пол" :options="defaultSex" @input="registrationForm.sex=$event" />
+        <div class="double-field">
+          <new-input :name="$t('registrationPage.specialization')" v-model="registrationForm.specialization" />
+          <new-input :requred='true' :name="$t('registrationPage.lastName')" v-model="registrationForm.lastName" />
+        </div>
 
-        <new-input name="Специализация" v-model="registrationForm.specialization" />
+        <div class="double-field">
+          <new-input :requred='true' :name="$t('registrationPage.firsName')" v-model="registrationForm.firsName" />
+          <new-input :requred='true' :name="$t('registrationPage.thirdName')" v-model="registrationForm.thirdName" />
+        </div>
 
-        <new-text-area name="Учреждения" v-model="registrationForm.institutions" />
-        <new-text-area name="Подпись" v-model="registrationForm.signature" />
+        <new-select :requred='true' :name="$t('registrationPage.country')" :options="defaultCountries" @input="registrationForm.country = $event" />
+        <new-input :requred='true' :name="$t('registrationPage.institutions')" v-model="registrationForm.institutions" />
 
-        <new-input name="E-mail" v-model="registrationForm.email" />
-        <new-input name="Телефон" v-model="registrationForm.telephone" />
-        <new-input name="Факс" v-model="registrationForm.fax" />
+        <new-text-area :name="$t('registrationPage.addres')" v-model="registrationForm.addres" />
+        <new-input :requred='true' name="E-mail" v-model="registrationForm.email" />
+        <new-input :name="$t('registrationPage.telephone')" v-model="registrationForm.telephone" />
 
-        <new-text-area name="Почтовый адрес" v-model="registrationForm.addres" />
-
-        <new-select :options="defaultCountries" @input="registrationForm.country=$event" />
-
-        <new-text-area name="О себе" v-model="registrationForm.aboutMe" />
-
-        <button @click.prevent="onSubmit()" class="button success-button">Регистрация</button>
+        <button disabled='submitDisabled' v-bind:class="{ disabled: submitDisabled }" @click.prevent="onSubmit()" class="button success-button">{{$t('registrationPage.registration')}}</button>
       </div>
     </form>
 
     <div>
-      <span>Конфиденциальность</span>
-      <p>Имена и адреса электронной почты, введенные на сайте этого журнала, будут использованы исключительно для целей, обозначенных этим журналом, и не будут использованы для каких-либо других целей или предоставлены другим лицам и организациям.</p>
+      <span>{{$t('registrationPage.confidentiality')}}</span>
+      <p>{{$t('registrationPage.confidentiality-text')}}</p>
       <p>ISSN 1561-2430 (Print)</p>
       <p>ISSN 2524-2415 (Online)</p>
     </div>
@@ -59,11 +46,25 @@
 <style scoped>
 form {
 }
+.double-field {
+  display: flex;
+  justify-content: space-between;
+}
+.double-field > div {
+  flex-grow: 0.45;
+}
 .form-data {
-  width: 40%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto 50px auto;
 }
 h3 {
   text-align: center;
+}
+button {
+  height: 50px;
+  font-size: 18px;
+}
+.disabled {
+  opacity: 0.5;
 }
 </style>
