@@ -16,7 +16,7 @@ export const actions = {
 
   [GET_TAGS_CLOUD]: (context: any) => {
     context.commit(TOGGLE_LOADING, true);
-    return Axios.get('http://master.basnet.by/lqo/tags_cloud.php').then( data => {
+    return Axios.get('http://imaph.bas-net.by:81/project.local/scripts/api_tags.php').then( data => {
       context.commit(TOGGLE_LOADING, false);
       return data;
     });
